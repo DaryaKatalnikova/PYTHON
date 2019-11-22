@@ -16,7 +16,7 @@
         {% csrf_token %}
         <div>
             {% for aa in a %}
-                <p><input type="radio" name="an">{{ aa.answer }}</p>
+                <p><input type="radio" name="{{ aa.answer }}">{{ aa.answer }}</p>
             {% endfor %}
 
             <!--<p><input type="radio" value="0" name="no">{{ aa.answer }}</p>-->

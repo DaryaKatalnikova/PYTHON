@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from .forms import *
 from .models import Test, Quest, Answer
 
@@ -15,12 +16,16 @@ def study(request,id):
     if quest1.tip == '1':
         if request.method == "POST":
             #for(as in a):
-            if 'an'in request.GET:
-                an=request.GET['an']
+            an = ''
+            if 'да'in request.POST:
+                an='Yes'
+            elif 'нет'in request.POST:
+                an='No'
             #answer1['quest1.question'] = an
-            print(an)
-            id += 1;
-            return redirect('study', id)
+            message = 'You searched for: %r' % an
+            #id += 1;
+            #return redirect('study', id)
+            return HttpResponse(message)
         else:
             return render(request, 'study/study_1.html', {'q': quest1, 'a': a})
     elif quest1.tip=='2':
