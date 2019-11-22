@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <title>Первый вопрос</title>
+	</head>
+    <body>
+
+    {% block content %}
+
+    <div>
+        <p>{{ q.question }}</p>
+    </div>
+
+    <form method="POST">
+        {% csrf_token %}
+        <div>
+            {% for aa in a %}
+                <p><input type="radio" name="an">{{ aa.answer }}</p>
+            {% endfor %}
+
+            <!--<p><input type="radio" value="0" name="no">{{ aa.answer }}</p>-->
+        </div>
+        <div>
+            <p><button type="submit">Дальше</button></p>
+        </div>
+    </form>
+    {% endblock %}
+	</body>
+</html>

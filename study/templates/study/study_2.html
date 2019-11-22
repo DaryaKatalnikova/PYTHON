@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Второй вопрос</title>
+    </head>
+    <body>
+     <div>
+        {% for qs in q %}
+            <p>{{ qs }}</p>
+        {% endfor %}
+    </div>
+    <form method="POST">
+        {% csrf_token %}
+        <p><input type="radio" value="1">Да</p>
+        <p><input type="radio" value="1">Нет</p>
+        <p><button type="submit"> Дальше</button></p>
+    </form>
+    </body>
+</html>

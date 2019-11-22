@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>TEST</title>
+</head>
+<body>
+
+    <p>Вы Хотите пройти тест на профориентацию??</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Начать тест</button>
+    </form>
+</body>
+</html>
