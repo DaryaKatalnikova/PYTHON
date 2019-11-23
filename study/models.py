@@ -27,9 +27,10 @@ class Answer(models.Model):
 class Schools(models.Model):
     name = models.CharField(max_length=200)
     link = models.CharField(max_length=200)
-    descritp = models.TextField()
-    answer = models.ForeignKey('Answer',on_delete=models.CASCADE,)
+    description = models.TextField()
+    test = models.ForeignKey('Test',on_delete=models.CASCADE,)
 
     def __str__(self):
         return self.name
         return self.link
+        return self.description

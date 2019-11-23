@@ -2,27 +2,31 @@
 <html>
 	<head>
         <meta charset="UTF-8">
-        <title>Первый вопрос</title>
+        <title>Вопросы</title>
+        <link rel="stylesheet" href="testpage.css">
 	</head>
     <body>
 
     {% block content %}
 
     <div>
-        <p>{{ q.question }}</p>
+        <h1>{{ q.question }}</h1>
     </div>
 
     <form method="POST">
         {% csrf_token %}
         <div>
             {% for aa in a %}
-                <p><input type="radio" name="an">{{ aa.answer }}</p>
+                {% if aa.answer == "Да" %}
+                    <p><input type="radio" name="Вапросик" value="1">{{ aa.answer }}</p>
+                {% endif %}
+                {% if aa.answer == "Нет" %}
+                    <p><input type="radio" name="Вапросик" value="0">{{ aa.answer }}</p>
+                {% endif %}
             {% endfor %}
-
-            <!--<p><input type="radio" value="0" name="no">{{ aa.answer }}</p>-->
         </div>
         <div>
-            <p><button type="submit">Дальше</button></p>
+            <p><button type="submit">Далее</button></p>
         </div>
     </form>
     {% endblock %}

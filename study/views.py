@@ -1,45 +1,40 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from .forms import *
 from .models import Test, Quest, Answer
 
+ans = []
+answer1 = {}
+
 def index(request):
     if request.method=="POST":
-        return redirect('study',15)
+        return redirect('study',17)
     else:
         return render(request, 'study/index.html')
 
 def study(request,id):
-    answer1={}
     quest1 = Quest.objects.get(id=id)
     a = Answer.objects.filter(quest = quest1)
     if quest1.tip == '1':
         if request.method == "POST":
-            #for(as in a):
-            if 'an'in request.GET:
-                an=request.GET['an']
-            #answer1['quest1.question'] = an
-            print(an)
-            id += 1;
+            an = ''
+            if '1'in request.POST:
+                ans.append(an)
+            elif '0'in request.POST:
+                ans.append(an)
+            id += 1
             return redirect('study', id)
+            if id == 25:
+                return redirect('study1')
+
         else:
             return render(request, 'study/study_1.html', {'q': quest1, 'a': a})
     elif quest1.tip=='2':
-        if request.method == "POST":
-            #answer1['q.question'] = a.answer
-            id += 1;
-            return redirect('study')
-        else:
-            return render(request, 'study/study_2.html', {'q':quest1, 'a':a})
-   # elif q.tip==3:
-        #if request.method == "POST":
-        #    answer['q.question'] = a.answer
-          #  return redirect('study/study_3.html')
-       # else:
-           # return render(request, 'study/study_3.html', {'q': q, 'a': a})
+        return redirect('study1')
     else:
         return redirect('study_1.html')
 
 
 
-#def study1(request):
- #   return render(request, 'study/study_2.html', {})
+def study1(request):
+    return render(request, 'study/school.html', {})
