@@ -12,6 +12,7 @@
 
     {% block content %}
      <form>
+        {% csrf_token %}
         <div>
             <p><button name="На главную">На главную</button></p>
         </div>
@@ -20,29 +21,25 @@
         <h1>{{ q.question }}</h1>
     </div>
 
-
     <form method="POST">
         {% csrf_token %}
-
         <div>
             {% for aa in a %}
-                {% if aa.answer == "Да" %}
+                {% if aa.answer == "Школа" %}
                     <p><input type="radio" required name="Вапросик" value="1">{{ aa.answer }}</p>
                 {% endif %}
-                {% if aa.answer == "Нет" %}
-                    <p><input type="radio" required name="Вапросик" value="0">{{ aa.answer }}</p>
+                {% if aa.answer == "Колледж" %}
+                    <p><input type="radio" required name="Вапросик" value="2">{{ aa.answer }}</p>
+                {% endif %}
+                {% if aa.answer == "ВУЗ" %}
+                    <p><input type="radio" required name="Вапросик" value="3">{{ aa.answer }}</p>
                 {% endif %}
             {% endfor %}
         </div>
         <div>
             <p><button type="submit">Далее</button></p>
-            <p><button name="Назад">Назад</button></p>
         </div>
     </form>
-     {% for aaa in ans %}
-         <p>{{ aaa }}</p>
-     {% endfor %}
-
     {% endblock %}
 	</body>
 </html>

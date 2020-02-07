@@ -34,3 +34,10 @@ class Schools(models.Model):
         return self.name
         return self.link
         return self.description
+
+class Useranswer(models.Model):
+    answer = models.CharField(max_length=200)
+    quest = models.ForeignKey('Quest', on_delete=models.CASCADE,)
+
+    def __str__(self):
+        return self.answer
