@@ -11,19 +11,18 @@ def index(request):
         return render(request, 'study/index.html')
 
 def study(request, id):
-    quest1 = Quest.objects.get(id = id)
+    quest1 = Quest.objects.get(pk = id)
     a = Answer.objects.filter(quest = quest1)
+    ua = Useranswer()
     if quest1.tip == '1':
         if request.method == "POST":
             if 'Назад'in request.POST:
                 id = id-1
                 return redirect('study', id)
-            if '1'in request.POST:
-                Useranswer.quest = quest1.id
-                Useranswer.answer = request.POST["Вапросик"]
-            elif '0'in request.POST:
-                Useranswer.quest = quest1.id
-                Useranswer.answer = request.POST["Вапросик"]
+            ua = Useranswer()
+            qw = Quest.objects.get(pk=26)
+            ua.quest = qw
+            ua.answer = 'qwerty'
             id += 1
             if id == 43:
                 return redirect('study1')
@@ -32,14 +31,17 @@ def study(request, id):
             return render(request, 'study/study_1.html', {'q': quest1, 'a': a})
     if quest1.tip == '2':
         if request.method == "POST":
-            an = ''
             id += 1
-            if '1'in request.POST:
-                Useranswer.quest = quest1.id
-                Useranswer.answer = request.POST["Вапросик"]
+            ua.quest = quest1
+            ua.answer = 'а я работаю'            
+            if 'Вапросик'in request.POST:
+                if request.POST["Вапросик"] == "1":
+                    ua.quest = quest1
+                    ua.answer = "Школа"
             elif '0'in request.POST:
-                Useranswer.quest = quest1.id
-                Useranswer.answer = request.POST["Вапросик"]
+                ua.quest = quest1
+                ua.answer = request.POST["Вапросик"]
+            ua.save()
             return redirect('study', id)
         else:
             return render(request, 'study/study_2.html', {'q': quest1, 'a': a})
