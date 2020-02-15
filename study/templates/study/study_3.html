@@ -13,7 +13,7 @@
     {% block content %}
      <form>
         <div>
-            <p><button name="На главную">На главную</button></p>
+            <button><a href="http://127.0.0.1:8000/main">На главную</a></button>
         </div>
      </form>
     <div>
@@ -25,31 +25,31 @@
         <div>
             {% for aa in a %}
                 {% if aa.answer == "Русский язык" %}
-                    <p><input type="radio" required name="Вапросик" value="1">{{ aa.answer }}</p>
+                    <p><input type="checkbox" required name="Вапросик" value="1">{{ aa.answer }}</p>
                 {% endif %}
                 {% if aa.answer == "Математика" %}
-                    <p><input type="radio" required name="Вапросик" value="2">{{ aa.answer }}</p>
+                    <p><input type="checkbox" required name="Вапросик" value="2">{{ aa.answer }}</p>
                 {% endif %}
                 {% if aa.answer == "Информатика" %}
-                    <p><input type="radio" required name="Вапросик" value="3">{{ aa.answer }}</p>
+                    <p><input type="checkbox" required name="Вапросик" value="3">{{ aa.answer }}</p>
                 {% endif %}
                 {% if aa.answer == "Физика" %}
-                    <p><input type="radio" required name="Вапросик" value="4">{{ aa.answer }}</p>
+                    <p><input type="checkbox" required name="Вапросик" value="4">{{ aa.answer }}</p>
                 {% endif %}
                 {% if aa.answer == "Химия" %}
-                    <p><input type="radio" required name="Вапросик" value="5">{{ aa.answer }}</p>
+                    <p><input type="checkbox" required name="Вапросик" value="5">{{ aa.answer }}</p>
                 {% endif %}
                 {% if aa.answer == "Биология" %}
-                    <p><input type="radio" required name="Вапросик" value="6">{{ aa.answer }}</p>
+                    <p><input type="checkbox" required name="Вапросик" value="6">{{ aa.answer }}</p>
                 {% endif %}
                 {% if aa.answer == "Обществознание и ее ответвления" %}
-                    <p><input type="radio" required name="Вапросик" value="7">{{ aa.answer }}</p>
+                    <p><input type="checkbox" required name="Вапросик" value="7">{{ aa.answer }}</p>
                 {% endif %}
                 {% if aa.answer == "История" %}
-                    <p><input type="radio" required name="Вапросик" value="8">{{ aa.answer }}</p>
+                    <p><input type="checkbox" required name="Вапросик" value="8">{{ aa.answer }}</p>
                 {% endif %}
                 {% if aa.answer == "Литература" %}
-                    <p><input type="radio" required name="Вапросик" value="9">{{ aa.answer }}</p>
+                    <p><input type="checkbox" required name="Вапросик" value="9">{{ aa.answer }}</p>
                 {% endif %}
             {% endfor %}
         </div>

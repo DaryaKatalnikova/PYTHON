@@ -28,16 +28,23 @@ class Schools(models.Model):
     name = models.CharField(max_length=200)
     link = models.CharField(max_length=200)
     description = models.TextField()
-    test = models.ForeignKey('Test',on_delete=models.CASCADE,)
+    test = models.ForeignKey('Test', on_delete=models.CASCADE,)
 
     def __str__(self):
         return self.name
         return self.link
         return self.description
 
+class Userid(models.Model):
+    userid = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.userid
+
 class Useranswer(models.Model):
     answer = models.CharField(max_length=200)
     quest = models.ForeignKey('Quest', on_delete=models.CASCADE,)
+    userid = models.ForeignKey('Userid', on_delete=models.CASCADE, null=True,)
 
     def __str__(self):
         return self.answer
