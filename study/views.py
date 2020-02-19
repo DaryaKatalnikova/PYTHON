@@ -1,14 +1,13 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import *
-from .models import Test, Quest, Answer, Useranswer, Userid
+from .models import Test, Quest, Answer, Useranswer
+import random
 
 
 def index(request):
     if request.method == "POST":
-        us = Userid()
-        us.userid = '1'
-        us.save()
+        Useranswer.user=1
         return redirect('study', 26)
     else:
         return render(request, 'study/index.html')
@@ -17,19 +16,17 @@ def study(request, id):
     quest1 = Quest.objects.get(pk = id)
     a = Answer.objects.filter(quest = quest1)
     ua = Useranswer()
-    us = Userid()
     if quest1.tip == '1':
         if request.method == "POST":
             if 'Назад'in request.POST:
                 id = id-1
                 return redirect('study', id)
-            ua = Useranswer()
             ua.quest = quest1
             ua.answer = "123"
             if "Вапросик" in request.POST:
                 ua.quest = quest1
                 ua.answer = request.POST["Вапросик"]
-                ua.userid = us.userid
+                ua.user= 1
             ua.save()
             id += 1
             if id == 43:
@@ -45,7 +42,7 @@ def study(request, id):
             if 'Вапросик'in request.POST:
                 ua.quest = quest1
                 ua.answer = request.POST["Вапросик"]
-                ua.userid = us.userid
+                ua.user=1
             ua.save()
             return redirect('study', id)
         else:
@@ -61,7 +58,7 @@ def study(request, id):
             if "Вапросик" in request.POST:
                 ua.quest = quest1
                 ua.answer = request.POST["Вапросик"]
-                ua.userid = us
+                ua.user=1
             ua.save()
             id += 1
             if id == 43:
@@ -73,8 +70,7 @@ def study(request, id):
 
 
 def study1(request):
-    us=Useranswer.objects.all()
-    usid = Userid.objects.all()
+    us=Useranswer.objects.filter()
     school=Schools.objects.all()
     us.delete()
     return render(request, 'study/school.html', {'a':us, 's':school})
