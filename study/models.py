@@ -35,12 +35,17 @@ class Schools(models.Model):
         return self.link
         return self.description
 
+class User(models.Model):
+    name = models.CharField(max_length=200, default='')
+
+    def __str__(self):
+        return self.name
 
 class Useranswer(models.Model):
     answer = models.CharField(max_length=200)
-    user = models.IntegerField()
+    name = models.ForeignKey('User', on_delete=models.CASCADE, null=True)
     quest = models.ForeignKey('Quest', on_delete=models.CASCADE,)
 
     def __str__(self):
         return self.answer
-        return self.user
+        return self.name

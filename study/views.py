@@ -7,7 +7,6 @@ import random
 
 def index(request):
     if request.method == "POST":
-        Useranswer.user=1
         return redirect('study', 26)
     else:
         return render(request, 'study/index.html')
@@ -19,30 +18,30 @@ def study(request, id):
     if quest1.tip == '1':
         if request.method == "POST":
             if 'Назад'in request.POST:
-                id = id-1
+                quest1.id = quest1.id-1
                 return redirect('study', id)
-            ua.quest = quest1
-            ua.answer = "123"
+            #ua.quest = quest1
+            #ua.answer = "123"
             if "Вапросик" in request.POST:
                 ua.quest = quest1
                 ua.answer = request.POST["Вапросик"]
-                ua.user= 1
+                ua.user = 1
             ua.save()
-            id += 1
-            if id == 43:
+            quest1.id += 1
+            if quest1.id == 43:
                 return redirect('study1')
             return redirect('study', id)
         else:
             return render(request, 'study/study_1.html', {'q': quest1, 'a': a})
     if quest1.tip == '2':
         if request.method == "POST":
-            id += 1
-            ua.quest = quest1
-            ua.answer = 'а я работаю'
+            quest1.id += 1
+            #ua.quest = quest1
+            #ua.answer = 'а я работаю'
             if 'Вапросик'in request.POST:
                 ua.quest = quest1
                 ua.answer = request.POST["Вапросик"]
-                ua.user=1
+                ua.user = 1
             ua.save()
             return redirect('study', id)
         else:
@@ -50,18 +49,18 @@ def study(request, id):
     if quest1.tip == '3':
         if request.method == "POST":
             if 'Назад' in request.POST:
-                id = id-1
+                quest1.id = quest1.id-1
                 return redirect('study', id)
             ua = Useranswer()
-            ua.quest = quest1
-            ua.answer = "123"
+            #ua.quest = quest1
+            #ua.answer = "123"
             if "Вапросик" in request.POST:
                 ua.quest = quest1
                 ua.answer = request.POST["Вапросик"]
-                ua.user=1
+                ua.user = 1
             ua.save()
-            id += 1
-            if id == 43:
+            quest1.id += 1
+            if quest1.id == 43:
                 return redirect('study1')
             return redirect('study', id)
         else:
