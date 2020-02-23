@@ -9,10 +9,11 @@
     <meta name="viewport" content="height=device-height, initial-scale=1">
 </head>
 <body>
-    <h1>Вы Хотите пройти тест на профориентацию??</h1>
+    <h1>Тест по определению учебного заведения</h1>
     <form method="post">
         {% csrf_token %}
-        <button type="submit">Начать тест</button>
+        <p>Введите свой адрес электронной почты:<input type="email" required name="email"></p>
+        <p><button type="submit">Начать тест</button></p>
     </form>
 </body>
 </html>

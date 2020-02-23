@@ -1,61 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ad7ed52-6087-40bb-9c66-ebef3bc48604" name="Default Changelist" comment="" />
+    <list default="true" id="eb897232-55a1-4d3f-b478-333a0672d662" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-        <option value="CSS File" />
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectId" id="1TWV6KQ3UsKvatAmkLfeaRjexkQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1YDWrNWSf5w46FUq8rsZJAhB9Bz" />
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -69,20 +28,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.project">
-    <configuration name="school.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/project/study/templates/study/school.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="study_1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/project/study/templates/study/study_1.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="project" type="Python.DjangoServer" factoryName="Django server">
-      <module name="project" />
+  <component name="RunManager">
+    <configuration name="permedufind" type="Python.DjangoServer" factoryName="Django server">
+      <module name="permedufind" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="mysite.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -100,64 +52,23 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JavaScript Debug.school.html" />
-        <item itemvalue="JavaScript Debug.study_1.html" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8ad7ed52-6087-40bb-9c66-ebef3bc48604" name="Default Changelist" comment="" />
-      <created>1573575661691</created>
+      <changelist id="eb897232-55a1-4d3f-b478-333a0672d662" name="Default Changelist" comment="" />
+      <created>1582477855293</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1573575661691</updated>
-      <workItem from="1573575670837" duration="5859000" />
-      <workItem from="1573824560636" duration="3167000" />
-      <workItem from="1573979608620" duration="3242000" />
-      <workItem from="1574078466371" duration="47350000" />
-      <workItem from="1574448508029" duration="1791000" />
-      <workItem from="1574490946241" duration="44113000" />
-      <workItem from="1574668449667" duration="17500000" />
-      <workItem from="1575456782231" duration="2174000" />
-      <workItem from="1578677945593" duration="42000" />
-      <workItem from="1578680198686" duration="702000" />
-      <workItem from="1578683071772" duration="1212000" />
-      <workItem from="1580298978466" duration="1478000" />
-      <workItem from="1580467185738" duration="2459000" />
-      <workItem from="1581058260523" duration="9917000" />
-      <workItem from="1581674258679" duration="7843000" />
-      <workItem from="1581746213621" duration="2451000" />
-      <workItem from="1581749546857" duration="4752000" />
-      <workItem from="1581857403753" duration="334000" />
-      <workItem from="1581858312502" duration="1570000" />
-      <workItem from="1581942405558" duration="3782000" />
-      <workItem from="1582029491025" duration="5982000" />
-      <workItem from="1582285106907" duration="5738000" />
-      <workItem from="1582315898074" duration="190000" />
-      <workItem from="1582352920228" duration="706000" />
+      <updated>1582477855293</updated>
+      <workItem from="1582477878812" duration="571000" />
+      <workItem from="1582478658408" duration="3230000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
