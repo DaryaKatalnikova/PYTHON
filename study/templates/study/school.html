@@ -10,18 +10,22 @@
     </head>
     <body>
     {% block content %}
+     <div>
+         <button><a href="http://127.0.0.1:8000/main">На главную</a></button>
+     </div>
+
     <div>
         <h>{{ s.name }}</h>
     </div>
 
      <div>
         <p>{{ s.description }}</p>
-        <p>{{ s.link }}</p>
      </div>
 
      <div>
-     <button><a href="http://127.0.0.1:8000/main">На главную</a></button>
+        <button><a href="{{ s.link }}">Перейти на сайт</a></button>
      </div>
+
     {% endblock %}
     </body>
 </html>
